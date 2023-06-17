@@ -1,4 +1,4 @@
-#!/usr/bin/python3.11
+#!/usr/bin/python3
 import random
 import tkinter as tk
 from PIL import ImageTk, Image
