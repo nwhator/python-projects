@@ -31,6 +31,18 @@ def logarithm(x, base):
     return math.log(x, base)
 
 
+def sine(x):
+    return math.sin(math.radians(x))
+
+
+def cosine(x):
+    return math.cos(math.radians(x))
+
+
+def tangent(x):
+    return math.tan(math.radians(x))
+
+
 print("Calculator")
 print("1. Add")
 print("2. Subtract")
@@ -39,8 +51,11 @@ print("4. Divide")
 print("5. Exponentiation")
 print("6. Square Root")
 print("7. Logarithm")
+print("8. Sine")
+print("9. Cosine")
+print("10. Tangent")
 
-choice = input("Enter your choice (1-7): ")
+choice = input("Enter your choice (1 - 10): ")
 
 result = None
 
@@ -50,7 +65,6 @@ if choice in ['1', '2', '3', '4']:
     else:
         num1 = result
     num2 = float(input("Enter the second number: "))
-
 if choice == '1':
     result = add(num1, num2)
     print(num1, "+", num2, "=", result)
@@ -86,5 +100,26 @@ elif choice == '7':
     base = float(input("Enter the logarithm base: "))
     result = logarithm(num, base)
     print("Logarithm of", num, "with base", base, "=", result)
+elif choice == '8':
+    if result is None:
+        num = float(input("Enter the angle in degrees: "))
+    else:
+        num = result
+    result = sine(num)
+    print("Sine of", num, "=", round(result, 4))
+elif choice == '9':
+    if result is None:
+        num = float(input("Enter the angle in degrees: "))
+    else:
+        num = result
+    result = cosine(num)
+    print("Cosine of", num, "=", round(result, 4))
+elif choice == '10':
+    if result is None:
+        num = float(input("Enter the angle in degrees: "))
+    else:
+        num = result
+    result = tangent(num)
+    print("Tangent of", num, "=", round(result, 4))
 else:
-    print("Wrong input. Please choose a number from 1 to 7.")
+    print("Wrong input. Please choose a number from 1 to 10.")
