@@ -1,20 +1,23 @@
 #!/usr/bin/python3
-
 import random
+
 
 # Function to generate a random number between 1 and 10
 def generate_random_number():
     return random.randint(1, 10)
+
 
 # Function to get user's name
 def get_user_name():
     name = input("Enter your name: ")
     return name
 
+
 # Function to get user's guess
 def get_user_guess():
     guess = int(input("Guess the number (between 1 and 10): "))
     return guess
+
 
 # Function to validate user's guess
 def validate_guess(guess, target):
@@ -23,12 +26,14 @@ def validate_guess(guess, target):
         return False
     return True
 
+
 # Function to provide hints based on user's guess
 def provide_hint(guess, target):
     if guess < target:
         print("Higher! Try guessing a larger number.")
     elif guess > target:
         print("Lower! Try guessing a smaller number.")
+
 
 # Function to play the number guessing game
 def play_game():
@@ -53,8 +58,9 @@ def play_game():
 
         provide_hint(guess, target_number)
 
-    print(f"Oops! You ran out of guesses, {name}. The correct number was {target_number}. Better luck next time!")
-    return True
+        print(f"Oops! You ran out of guesses, {name}. The correct number was {target_number}. Better luck next time!")
+        return True
+
 
 # Main program
 play_again = True
