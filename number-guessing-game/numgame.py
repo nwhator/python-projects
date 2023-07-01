@@ -15,8 +15,12 @@ def get_user_name():
 
 # Function to get user's guess
 def get_user_guess():
-    guess = int(input("Guess the number (between 1 and 10): "))
-    return guess
+    while True:
+        try:
+            guess = int(input("Guess the number (between 1 and 10): "))
+            return guess
+        except ValueError:
+            print("Invalid input! Please enter a valid number.")
 
 
 # Function to validate user's guess
