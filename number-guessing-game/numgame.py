@@ -58,8 +58,8 @@ def play_game():
 
         provide_hint(guess, target_number)
 
-        print(f"Oops! You ran out of guesses, {name}. The correct number was {target_number}. Better luck next time!")
-        return True
+    print(f"Oops! You ran out of guesses, {name}. The correct number was {target_number}. Better luck next time!")
+    return True
 
 
 # Main program
