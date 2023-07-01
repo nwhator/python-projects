@@ -68,10 +68,21 @@ def play_game():
 
 # Main program
 play_again = True
+score = 0
 
 while play_again:
-    play_again = play_game()
-    if play_again:
-        choice = input("Do you want to play again? (yes/no): ")
-        play_again = choice.lower() == "yes"
+    game_result = play_game()
+    if game_result:
+        score += 1
 
+    print(f"Your current score: {score}")
+
+    while True:
+        choice = input("Do you want to play again? (yes/no): ")
+        if choice.lower() == "yes" or choice.lower() == "no":
+            break
+        else:
+            print("Invalid input! Please enter 'yes' or 'no'.")
+    play_again = choice.lower() == "yes"
+
+print(f"Thanks for playing! Your final score: {score}")
